@@ -1,11 +1,11 @@
 {
-  "name": "chrome-extension-boilerplate-react",
-  "version": "5.0.4",
-  "description": "A chrome extension boilerplate built with React 18, Webpack 5, and Webpack Dev Server 4",
+  "name": "email-assistant",
+  "version": "0.0.1",
+  "description": "Extension that helps OpenAI write emails",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lxieyang/chrome-extension-boilerplate-react.git"
+    "url": ""
   },
   "scripts": {
     "build": "node utils/build.js",
@@ -13,8 +13,11 @@
     "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
   },
   "dependencies": {
+    "bootstrap": "^5.2.3",
+    "openai": "^3.3.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "sse.js": "^0.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",

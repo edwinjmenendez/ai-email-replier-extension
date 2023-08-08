@@ -1,0 +1,22 @@
+.assistant-btn {
+    width: 70px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3498db;
+    border: 2px solid #2980b9;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    z-index: 1000;
+}
+
+.assistant-btn:hover {
+    background-color: #2980b9;
+    border-color: #3498db;
+}
