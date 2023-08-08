@@ -71,8 +71,7 @@ const attachAssistantButton = (node, responseEmail, ariaLabel) => {
     console.log('aria-label attach button: ', ariaLabel)
 
     const buttonText = ariaLabel !== 'New Message' ? 'Email Reply Generator' : 'Email Generator';
-    const prompt = ariaLabel !== 'New Message' ? `Reply to the following email: ${responseEmail}` : 'Continue writing the following email: \n"' + node.textContent + '"';
-
+    const prompt = ariaLabel !== 'New Message' ? `Reply to the following email: ${responseEmail}` : 'Continue writing the following email: \n"';
     console.log({ buttonText })
     console.log({ prompt })
 
@@ -97,8 +96,8 @@ const attachAssistantButton = (node, responseEmail, ariaLabel) => {
             // node.textContent += ' ' + completion.data.choices[0].text;
             const openaiParameters = {
                 model: 'text-davinci-003',
-                prompt: prompt,
-                temperature: 0.6,
+                prompt: prompt + node.textContent + '"',
+                temperature: 1,
                 max_tokens: 200,
                 stream: true
             }
